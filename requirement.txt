@@ -1,0 +1,13 @@
+Package                 Version
+----------------------- -----------
+
+scikit-learn-1.9.0
+ImageHash               4.3.2
+joblib                  1.6.0
+keras                   3.15.1
+matplotlib              3.11.1
+numpy                   2.5.2
+opencv-python           5.0.0.93
+pandas                  3.0.5
+tensorflow              2.21.0
+
