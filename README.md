@@ -139,10 +139,10 @@ and running cells out of sequence is the most common source of
 **5. Outputs**
 
 Running the notebook creates/populates:
-- `figures/Task1/`, `figures/Task2/`, `figures/Task3/` — all generated charts
-- `models/` — the saved final model (`.keras` files)
+- `figures/Task1/`, `figures/Task2/`, `figures/Task3/`  all generated charts
+- `models/` the saved final model (`.keras` files)
 
-Both are created automatically (`os.makedirs(..., exist_ok=True)`) — no
+Both are created automatically (`os.makedirs(..., exist_ok=True)`), no
 need to create them by hand first.
 
 **6. Pretrained weights**
