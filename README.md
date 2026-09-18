@@ -165,26 +165,31 @@ trained classification head, is the recommended model.**
    (0.808 vs. VGG16's 0.779, Custom CNN's 0.442), precision (0.760 vs.
    0.725 vs. 0.442), recall (0.826 vs. 0.804 vs. 1.000*), F1 (0.792 vs.
    0.763 vs. 0.613), and AUC (0.900 vs. 0.879 vs. 0.691). *Custom CNN's
-   recall of 1.000 is not a genuine strength — see point 4.
-2. **It achieves this with 3.6× fewer parameters than VGG16** (4.13M vs.
-   14.75M total) — this is not a performance-for-complexity trade-off
+   recall of 1.000 is not a genuine strength.
+
+   
+3. **It achieves this with 3.6× fewer parameters than VGG16** (4.13M vs.
+   14.75M total), this is not a performance-for-complexity trade-off
    where a marker has to weigh competing priorities; EfficientNetB0 is
    simultaneously smaller and better, which is the strongest possible
    form of evidence for a recommendation.
-3. **The RQ2 hyperparameter sweep independently supported this before the
-   test set was even touched**: EfficientNetB0's frozen-head sweep (§4.2)
+   
+5. **The RQ2 hyperparameter sweep independently supported this before the
+   test set was even touched**: EfficientNetB0's frozen-head sweep (§3.2)
    reached validation AUC 0.90–0.96 across all five configurations tested,
-   compared to VGG16's 0.90–0.92 band (§3.2) — the same ranking the test
+   compared to VGG16's 0.90–0.92 band (§2.2), the same ranking the test
    set later confirmed.
-4. **The RQ3 fine-tuning evidence supports the "frozen, not fine-tuned"
+   
+7. **The RQ3 fine-tuning evidence supports the "frozen, not fine-tuned"
    design choice for both transfer models, reinforcing the reliability of
    the frozen-backbone approach generally**: unfreezing the last block hurt
    both VGG16 (AUC 0.927→0.595) and EfficientNetB0 (AUC 0.960→0.428) at
-   this dataset size — EfficientNetB0's collapse was the more severe of the
+   this dataset size, EfficientNetB0's collapse was the more severe of the
    two, which is worth monitoring if this dataset grows and fine-tuning is
    revisited, but does not change the recommendation for the frozen
    configuration evaluated here.
-5. **The custom CNN is not recommended, and its result requires a specific
+   
+9. **The custom CNN is not recommended, and its result requires a specific
    caveat, not just a "weakest model" ranking.** Its 100% recall and
    AUC 0.691 could easily be misread as "high-recall, acceptable" if the
    confusion matrix weren't inspected directly — it in fact predicted
