@@ -128,13 +128,13 @@ and running cells out of sequence is the most common source of
 **4. Expect these run times** (CPU, approximate):
 | Section | Time |
 |---|---|
-| Part 1 — full image scan (Task 1) | 1–2 minutes |
-| Part 2 — preprocessing pipeline (Task 2) | a few seconds |
-| Part 3 — Custom CNN hyperparameter sweep | ~12–15 minutes |
-| Part 3 — VGG16 / EfficientNetB0 bottleneck extraction | ~2–3 minutes each |
-| Part 3 — frozen-head sweeps (cached features) | seconds |
-| Part 3 — fine-tuning comparison runs | ~2–3 minutes each |
-| Part 3 — final model training (all three) | a few minutes total |
+| Part 1: full image scan (Task 1) | 1–2 minutes |
+| Part 2:  preprocessing pipeline (Task 2) | a few seconds |
+| Part 3: Custom CNN hyperparameter sweep | ~12–15 minutes |
+| Part 3: VGG16 / EfficientNetB0 bottleneck extraction | ~2–3 minutes each |
+| Part 3: frozen-head sweeps (cached features) | seconds |
+| Part 3: fine-tuning comparison runs | ~2–3 minutes each |
+| Part 3: final model training (all three) | a few minutes total |
 
 **5. Outputs**
 
