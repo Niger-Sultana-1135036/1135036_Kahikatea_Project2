@@ -92,7 +92,7 @@ project/
 ├── figures/
 └── models/
 ```
-The notebook expects this exact layout — `DATA_ROOT = "../data"` in the
+The notebook expects this exact layout: `DATA_ROOT = "../data"` in the
 setup cell assumes the notebook lives in `src/` and `data/` is a sibling
 folder one level up. If your layout differs, update `DATA_ROOT` (and the
 `FIG_DIR`/`MODEL_DIR` paths in each Part) accordingly.
